@@ -1,0 +1,42 @@
+# Package index
+
+## All functions
+
+- [`corticalSilentPeriod()`](https://x-biosignal.github.io/PhysioNeurophys/reference/corticalSilentPeriod.md)
+  : Measure the cortical silent period
+- [`fWaveDetect()`](https://x-biosignal.github.io/PhysioNeurophys/reference/fWaveDetect.md)
+  : Detect and summarize F-waves
+- [`getTMSpulses()`](https://x-biosignal.github.io/PhysioNeurophys/reference/getTMSpulses.md)
+  : Retrieve TMS pulse metadata
+- [`hMaxMMax()`](https://x-biosignal.github.io/PhysioNeurophys/reference/hMaxMMax.md)
+  : Calculate the Hmax/Mmax ratio
+- [`hReflexLatency()`](https://x-biosignal.github.io/PhysioNeurophys/reference/hReflexLatency.md)
+  : Estimate H-reflex onset latency
+- [`hReflexRecruitment()`](https://x-biosignal.github.io/PhysioNeurophys/reference/hReflexRecruitment.md)
+  : Measure an H-reflex recruitment series
+- [`hReflexThreshold()`](https://x-biosignal.github.io/PhysioNeurophys/reference/hReflexThreshold.md)
+  : Estimate the H-reflex recruitment threshold
+- [`make_mep()`](https://x-biosignal.github.io/PhysioNeurophys/reference/make_mep.md)
+  : Simulate epoched TMS motor-evoked potentials
+- [`mepAmplitude()`](https://x-biosignal.github.io/PhysioNeurophys/reference/mepAmplitude.md)
+  : Measure motor-evoked-potential amplitude
+- [`mepLatency()`](https://x-biosignal.github.io/PhysioNeurophys/reference/mepLatency.md)
+  : Estimate motor-evoked-potential onset latency
+- [`pairedPulse()`](https://x-biosignal.github.io/PhysioNeurophys/reference/pairedPulse.md)
+  : Summarize paired-pulse MEP responses
+- [`prep2()`](https://x-biosignal.github.io/PhysioNeurophys/reference/prep2.md)
+  : Apply the PREP2 upper-limb prognosis algorithm
+- [`recruitmentCurve()`](https://x-biosignal.github.io/PhysioNeurophys/reference/recruitmentCurve.md)
+  : Fit a Boltzmann MEP recruitment curve
+- [`removeTMSpulse()`](https://x-biosignal.github.io/PhysioNeurophys/reference/removeTMSpulse.md)
+  : Remove TMS pulse and recharge intervals
+- [`setTMSpulses()`](https://x-biosignal.github.io/PhysioNeurophys/reference/setTMSpulses.md)
+  : Store TMS pulse metadata
+- [`siciIcf()`](https://x-biosignal.github.io/PhysioNeurophys/reference/siciIcf.md)
+  : Summarize short-interval inhibition and intracortical facilitation
+- [`soundClean()`](https://x-biosignal.github.io/PhysioNeurophys/reference/soundClean.md)
+  : Clean TMS-EEG sensor noise with SOUND
+- [`tepAverage()`](https://x-biosignal.github.io/PhysioNeurophys/reference/tepAverage.md)
+  : Average TMS-evoked potentials and measure canonical peaks
+- [`tmsSSPSIR()`](https://x-biosignal.github.io/PhysioNeurophys/reference/tmsSSPSIR.md)
+  : Clean TMS-EEG muscle artifact with SSP-SIR
