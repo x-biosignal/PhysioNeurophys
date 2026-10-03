@@ -1,0 +1,73 @@
+---
+title: "TMS motor-evoked potentials with PhysioNeurophys"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{TMS motor-evoked potentials with PhysioNeurophys}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+PhysioNeurophys analyses transcranial magnetic stimulation (TMS) and peripheral
+motor neurophysiology on `PhysioExperiment` objects: motor-evoked-potential (MEP)
+amplitude and latency, Boltzmann recruitment curves, H-reflex and F-wave
+metrics, paired-pulse SICI/ICF, cortical silent period, TMS-EEG cleaning, and the
+PREP2 prognosis algorithm.
+
+This vignette uses the built-in simulator so it runs offline. TEP/MEP labels are
+measurement windows, not proof of a cortical source.
+
+```{r setup}
+library(PhysioNeurophys)
+```
+
+## 1. Simulate epoched MEPs
+
+`make_mep()` generates biphasic MEP waveforms with a known latency and a
+Boltzmann amplitude-intensity relationship, and attaches the per-trial TMS pulse
+metadata. Epochs start 20 ms before the pulse.
+
+```{r simulate}
+pe <- make_mep(n_trials = 12, seed = 1)
+dim(SummarizedExperiment::assay(pe))   # samples x channels x trials
+getTMSpulses(pe)[1:3, ]
+```
+
+## 2. MEP amplitude
+
+Peak-to-peak amplitude is measured within a response window, per channel and
+trial. Pass `epoch_start_ms = -20` to match the simulated epoch.
+
+```{r amplitude}
+amp <- mepAmplitude(pe, epoch_start_ms = -20)
+head(amp[, c("trial", "intensity_pct_mso", "p2p")])
+```
+
+## 3. MEP onset latency
+
+```{r latency}
+lat <- mepLatency(pe, epoch_start_ms = -20)
+head(lat[, c("trial", "onset_sample", "latency_ms")])
+```
+
+## 4. Boltzmann recruitment curve
+
+Amplitude rises sigmoidally with stimulator intensity. `recruitmentCurve()` fits
+a three-parameter logistic and returns the fitted parameters and fit quality.
+
+```{r recruitment}
+rc <- recruitmentCurve(pe, epoch_start_ms = -20)
+rc
+```
+
+## Where to go next
+
+`?PhysioNeurophys` lists every entry point, including peripheral measures
+(`hReflexRecruitment()`, `hMaxMMax()`, `fWaveDetect()`), paired-pulse
+inhibition/facilitation (`pairedPulse()`, `siciIcf()`), the cortical silent
+period (`corticalSilentPeriod()`), TMS-EEG pulse removal and cleaning
+(`removeTMSpulse()`, `tmsSSPSIR()`, `soundClean()`, `tepAverage()`), and the
+PREP2 upper-limb prognosis (`prep2()`).

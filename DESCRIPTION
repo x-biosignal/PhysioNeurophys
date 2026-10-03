@@ -1,0 +1,49 @@
+Package: PhysioNeurophys
+Title: TMS and Peripheral Motor Neurophysiology Analysis
+Version: 0.4.1
+Authors@R:
+    person(given = "Yusuke",
+           family = "Matsui",
+           role = c("aut", "cre"),
+           email = "mail.to.matsui@gmail.com")
+Description: Provides transcranial magnetic stimulation (TMS) and peripheral
+    motor-neurophysiology analysis for PhysioExperiment objects. Includes
+    motor-evoked-potential amplitude and latency, Boltzmann recruitment curves,
+    H-reflex recruitment and Hmax/Mmax metrics, F-wave persistence and latency,
+    paired-pulse inhibition and facilitation, cortical silent-period timing,
+    TMS-EEG pulse removal, source-informed SSP-SIR and SOUND cleaning,
+    TMS-evoked-potential summaries, the PREP2 upper-limb stroke-prognosis
+    algorithm, and a governed TMS pulse and intensity metadata schema.
+Depends:
+    R (>= 4.2),
+    PhysioExperiment (>= 2.0.0)
+Imports:
+    SummarizedExperiment,
+    S4Vectors,
+    stats
+Suggests:
+    PhysioCore,
+    PhysioEMG,
+    PhysioEEG,
+    testthat (>= 3.2.0),
+    knitr,
+    rmarkdown
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Collate:
+    'tms-metadata.R'
+    'mep.R'
+    'hreflex.R'
+    'fwave.R'
+    'paired-pulse.R'
+    'tms-eeg.R'
+    'prep2.R'
+    'mep-data.R'
+    'zzz.R'
+URL: https://github.com/x-biosignal/PhysioNeurophys, https://x-biosignal.r-universe.dev/PhysioNeurophys, https://x-biosignal.github.io/PhysioNeurophys/
+BugReports: https://github.com/x-biosignal/PhysioNeurophys/issues
+Config/roxygen2/version: 8.0.0
+RoxygenNote: 7.3.3

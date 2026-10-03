@@ -1,0 +1,12 @@
+fixture,key,value
+schema,version,1
+sample_range,first,144
+sample_range,last,149
+linear_bridge,144,20742
+linear_bridge,145,21035
+linear_bridge,146,21328
+linear_bridge,147,21621
+linear_bridge,148,21914
+linear_bridge,149,22207
+tep_peak,P30_latency_ms,30
+tep_peak,P30_amplitude,2

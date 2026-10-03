@@ -1,0 +1,16 @@
+Schema: 1
+Generator: data-raw/generate-tms-eeg-reference.R
+Creation-Date: 2026-07-29
+Sampling-Rate-Hz: 1000
+Channel-Order: E1,E2,E3,E4;C3,C4
+Coordinate-Frame: analytic_fixture
+Preprocessing: none; raw analytic and simulated arrays
+Fixture-Type: analytic,simulated
+TESA-Version: not-applicable
+TESA-Waveforms-Included: false
+Cross-Language-Fixture: Python standard-library CSV
+Cross-Language-Fixture-Version: 1
+License: MIT package fixture; no third-party waveform
+RDS-SHA256: aac77b3e24b7ffca387e10163e21b17aea0dfc9fa03bf347bdba248480d544b8
+Cross-Language-SHA256: dba75eb398cb66896c24fda5440349b3b7e71e276776b5d969783276dc9cad16
+Sources: https://doi.org/10.1016/j.neuroimage.2016.05.028; https://doi.org/10.1016/j.neuroimage.2017.10.021; https://doi.org/10.1016/j.neuroimage.2016.10.031
