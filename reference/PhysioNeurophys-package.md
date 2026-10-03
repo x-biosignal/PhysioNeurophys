@@ -20,7 +20,3 @@ Useful links:
 ## Author
 
 **Maintainer**: Yusuke Matsui <mail.to.matsui@gmail.com>
-
-Authors:
-
-- Yusuke Matsui <mail.to.matsui@gmail.com>

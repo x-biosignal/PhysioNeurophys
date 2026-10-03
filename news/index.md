@@ -1,5 +1,17 @@
 # Changelog
 
+## PhysioNeurophys 0.4.1
+
+### Documentation
+
+- A vignette carries one task end to end on synthetic or bundled data,
+  offline, and is built and run by `R CMD check`.
+- Runnable `@examples` added or corrected across 1 help pages. Each runs
+  offline in seconds, writes nothing outside
+  [`tempdir()`](https://rdrr.io/r/base/tempfile.html), and is executed
+  by `R CMD check`; anything needing a device, a download or an optional
+  backend is fenced with the reason stated.
+
 ## PhysioNeurophys 0.4.0
 
 - Added sample-exact TMS pulse and recharge removal with inspectable
